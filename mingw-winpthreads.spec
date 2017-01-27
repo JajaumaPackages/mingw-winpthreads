@@ -12,7 +12,7 @@
 
 Name:           mingw-winpthreads
 Version:        5.0.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        MinGW pthread library
 
 # The main license of winpthreads is MIT, but parts of this library
@@ -37,8 +37,6 @@ BuildRequires:  mingw32-filesystem >= 95
 BuildRequires:  mingw64-filesystem >= 95
 BuildRequires:  mingw32-gcc-c++
 BuildRequires:  mingw64-gcc-c++
-BuildRequires:  mingw32-crt
-BuildRequires:  mingw64-crt
 
 %if 0%{?enable_tests}
 BuildRequires:  wine-wow
@@ -209,6 +207,9 @@ find $RPM_BUILD_ROOT -name "*.la" -delete
 
 
 %changelog
+* Fri Jan 27 2017 Jajauma's Packages <jajauma@yandex.ru> - 5.0.0-3
+- De-bootstrap build
+
 * Fri Jan 27 2017 Jajauma's Packages <jajauma@yandex.ru> - 5.0.0-2
 - Bootstrap build
 
