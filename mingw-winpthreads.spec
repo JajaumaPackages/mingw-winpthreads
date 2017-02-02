@@ -12,7 +12,7 @@
 
 Name:           mingw-winpthreads
 Version:        5.0.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        MinGW pthread library
 
 # The main license of winpthreads is MIT, but parts of this library
@@ -207,6 +207,9 @@ find $RPM_BUILD_ROOT -name "*.la" -delete
 
 
 %changelog
+* Thu Feb 02 2017 Jajauma's Packages <jajauma@yandex.ru> - 5.0.0-4
+- Rebuild with GCC 5.4.0
+
 * Fri Jan 27 2017 Jajauma's Packages <jajauma@yandex.ru> - 5.0.0-3
 - De-bootstrap build
 
